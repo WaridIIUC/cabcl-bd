@@ -20,6 +20,11 @@ body {
   color: #6c757d;
 }
 
+#slider-w img{
+  height: 400px;
+  width: 300px;
+}
+
 /*--------------------
  TYPOGRAPHY
 -----------------*/
