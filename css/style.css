@@ -23,8 +23,12 @@ body {
 #slider-w img{
   height: 400px;
   width: 300px;
-}
+}product-img
 
+#product-slider{
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
 /*--------------------
  TYPOGRAPHY
 -----------------*/
@@ -125,6 +129,11 @@ img {
   .section {
     padding: 7.5rem 0;
   }
+  #product-slider{
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+  
 }
 
 .section-top {
@@ -1428,6 +1437,11 @@ CONTACT PAGE
     padding-top: .75rem;
     padding-bottom: .75rem;
   }
+
+  #product-slider{
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
   .dropdown-item + .dropdown-item {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
@@ -1468,6 +1482,10 @@ CONTACT PAGE
     TABLET LAYOUT: 768px
 ------------------------------------*/
 @media (max-width: 992px) {
+  #product-slider{
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
   .section-title {
     font-size: 30px;
   }
