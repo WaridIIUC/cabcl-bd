@@ -206,7 +206,9 @@ img {
 }
 
 .btn-circled {
-  border-radius: 75px;
+  border-radius: 10px;
+  padding: 10px 15px !important;
+  margin-top: 10px;
 }
 
 .bg-primary, .btn-primary, .btn-white:hover {
