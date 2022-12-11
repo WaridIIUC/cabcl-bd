@@ -29,12 +29,74 @@
     <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
-   
+   <style>
+       .modal-content {
+        position: relative;
+        color: black;
+        background-color: transparent;
+        margin: 20% -250px;
+        padding: 0;
+        border: none;
+        width: auto;
+        display: table;
+        }
+        @media only screen and (min-width: 1800px) {
+            .modal-content {
+            position: relative;
+            color: black;
+            background-color: transparent;
+            margin: 55% -350px;
+            padding: 0;
+            border: none;
+            width: auto;
+            display: table;
+            }
+        }
+        @media only screen and (min-width: 1400px) and (max-width: 1799px) {
+            .modal-content {
+            position: relative;
+            color: black;
+            background-color: transparent;
+            margin: 50% -350px;
+            padding: 0;
+            border: none;
+            width: auto;
+            display: table;
+            }
+        }
+        @media only screen and (min-width: 320px) and (max-width: 768px) {
+            .modal-content {
+            position: relative;
+            color: black;
+            background-color: transparent;
+            margin: 50% 0px;
+            padding: 0;
+            border: none;
+            width: auto;
+            display: table;
+            }
+        }
+   </style>
 
 </head>
 
 <body id="top-header">
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        
+        <img data-bs-dismiss="modal" aria-label="close" style="width: 100%;" src="./images/banner/cabcl_banner.png" alt="">
+        <a href="https://www.facebook.com/abzol14"><i class="fab fa-facebook-f text-primary"></i> Our Facebook Page</a>
+        
+      </div>
+    </div>
+    </div>
+  
     <div id="page-loader">
         <div class="loader-icon fa fa-spin colored-border"></div>
     </div>
@@ -138,6 +200,11 @@
                         <li class="nav-item ">
                             <a href="contact.html" class="nav-link">
                                 Contact
+                            </a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="career.html" class="nav-link">
+                                Career
                             </a>
                         </li>
                     </ul>
@@ -743,6 +810,16 @@
     <script type="text/javascript">
         var scrolltotop = { setting: { startline: 100, scrollto: 0, scrollduration: 1e3, fadeduration: [500, 100] }, controlHTML: '<img src="https://lh3.googleusercontent.com/pw/AM-JKLV2MF2WN_5B3td3va3nQNWhyjx3poIp_gMEW1h4DUK5eokCIBaWGKmfPDFAaprGsMOv_pa56Iff9W0vaZWp3WoxCWgYsCc3zCdzEoOOIlajT2Cttpvrkg-ddHTDtpLqGl8sRFlkHUCF2sQbC4gaZYU=s50-no" />', controlattrs: { offsetx: 5, offsety: 5 }, anchorkeyword: "#top", state: { isvisible: !1, shouldvisible: !1 }, scrollup: function () { this.cssfixedsupport || this.$control.css({ opacity: 0 }); var t = isNaN(this.setting.scrollto) ? this.setting.scrollto : parseInt(this.setting.scrollto); t = "string" == typeof t && 1 == jQuery("#" + t).length ? jQuery("#" + t).offset().top : 0, this.$body.animate({ scrollTop: t }, this.setting.scrollduration) }, keepfixed: function () { var t = jQuery(window), o = t.scrollLeft() + t.width() - this.$control.width() - this.controlattrs.offsetx, s = t.scrollTop() + t.height() - this.$control.height() - this.controlattrs.offsety; this.$control.css({ left: o + "px", top: s + "px" }) }, togglecontrol: function () { var t = jQuery(window).scrollTop(); this.cssfixedsupport || this.keepfixed(), this.state.shouldvisible = t >= this.setting.startline ? !0 : !1, this.state.shouldvisible && !this.state.isvisible ? (this.$control.stop().animate({ opacity: 1 }, this.setting.fadeduration[0]), this.state.isvisible = !0) : 0 == this.state.shouldvisible && this.state.isvisible && (this.$control.stop().animate({ opacity: 0 }, this.setting.fadeduration[1]), this.state.isvisible = !1) }, init: function () { jQuery(document).ready(function (t) { var o = scrolltotop, s = document.all; o.cssfixedsupport = !s || s && "CSS1Compat" == document.compatMode && window.XMLHttpRequest, o.$body = t(window.opera ? "CSS1Compat" == document.compatMode ? "html" : "body" : "html,body"), o.$control = t('<div id="topcontrol">' + o.controlHTML + "</div>").css({ position: o.cssfixedsupport ? "fixed" : "absolute", bottom: o.controlattrs.offsety, right: o.controlattrs.offsetx, opacity: 0, cursor: "pointer" }).attr({ title: "Scroll to Top" }).click(function () { return o.scrollup(), !1 }).appendTo("body"), document.all && !window.XMLHttpRequest && "" != o.$control.text() && o.$control.css({ width: o.$control.width() }), o.togglecontrol(), t('a[href="' + o.anchorkeyword + '"]').click(function () { return o.scrollup(), !1 }), t(window).bind("scroll resize", function (t) { o.togglecontrol() }) }) } }; scrolltotop.init();</script>
 
+    <script>
+    $(document).ready(function() {
+        if(sessionStorage.getItem('#exampleModal')!=='true')
+        {
+            $('#exampleModal').modal('show');
+            sessionStorage.setItem('#exampleModal',true);
+        }
+    });
+
+    </script>
 </body>
 
 </html>
